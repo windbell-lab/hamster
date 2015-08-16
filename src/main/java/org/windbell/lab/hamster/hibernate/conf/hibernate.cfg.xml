@@ -11,7 +11,7 @@
 	    <!-- <property name="connection.url">jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8</property> -->
 	    <property name="connection.url">jdbc:mysql://localhost:3306/test</property>
 	    <property name="connection.username">root</property>
-	    <property name="connection.password">1234</property>
+	    <property name="connection.password">eversec123098</property>
 	    
 	    <!-- hibernate 自身属性  -->
 	    <!-- org.hibernate.dialect.Oracle9Dialect -->
