@@ -2,6 +2,7 @@ package org.windbell.lab.hamster.hibernate.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,6 +16,7 @@ public class BaseEntity {
 	private String creater;
 	private String updater;
 	private Date createTime;
+	@Column(columnDefinition="timestamp default CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
 	private Date updateTime;
 	
 	public BaseEntity() {
