@@ -7,7 +7,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Version;
+
+import org.hibernate.annotations.Generated;
+import org.hibernate.annotations.GenerationTime;
 @MappedSuperclass
 public class BaseEntity {
 	@Id
@@ -17,8 +22,13 @@ public class BaseEntity {
 	private Integer version;
 	private String creater;
 	private String updater;
+	@Column(columnDefinition="timestamp default CURRENT_TIMESTAMP",nullable=false,updatable=false)
+	@Temporal(TemporalType.TIMESTAMP)
+	@Generated(value = GenerationTime.INSERT)
 	private Date createTime;
 	@Column(columnDefinition="timestamp default CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP",nullable=false)
+	@Temporal(TemporalType.TIMESTAMP)
+	@Generated(value = GenerationTime.ALWAYS)
 	private Date updateTime;
 	
 	public BaseEntity() {
