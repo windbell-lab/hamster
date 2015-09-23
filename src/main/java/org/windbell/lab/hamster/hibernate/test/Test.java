@@ -40,6 +40,10 @@ public class Test {
 		ts.begin();
 		session.save(stu);
 		ts.commit();
+//		Transaction ts = session.beginTransaction();
+//		ts.begin();
+		session.save(stu);
+//		ts.commit();
 		Query createQuery = session.createQuery("FROM Student as s");
 //		createQuery.setLockMode("studnet", LockMode.UPGRADE);
 		List list2 = createQuery.list();

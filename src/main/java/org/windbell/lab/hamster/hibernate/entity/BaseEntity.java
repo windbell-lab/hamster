@@ -47,6 +47,7 @@ public class BaseEntity {
 		return version;
 	}
 
+	@SuppressWarnings("unused")
 	private void setVersion(Integer version) {
 		this.version = version;
 	}
