@@ -44,8 +44,8 @@ public class Test {
 //		ts.begin();
 		session.save(stu);
 //		ts.commit();
-		Query createQuery = session.createQuery("FROM Student as s");
 //		createQuery.setLockMode("studnet", LockMode.UPGRADE);
+		Query createQuery = session.createQuery("FROM Student as s");
 		List list2 = createQuery.list();
 		JSONArray json=JSONArray.fromObject(list2);
 		System.out.println(json.toString());
