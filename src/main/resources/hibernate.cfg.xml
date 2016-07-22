@@ -1,0 +1,36 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- 数据连接基本信息 -->
+		<!-- oracle.jdbc.OracleDriver -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- jdbc:oracle:thin:@localhost:1521:xe -->
+		<!-- <property name="connection.url">jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8</property> -->
+		<property name="connection.url">jdbc:mysql://localhost:3306/m_t?useUnicode=true&amp;characterEncoding=UTF-8</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">eversec123098</property>
+
+		<!-- hibernate 自身属性 -->
+		<!-- org.hibernate.dialect.Oracle9Dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<property name="hbm2ddl.auto">update</property>
+		<!-- <property name="hbm2ddl.auto">create-drop</property> -->
+		<!-- <property name="hbm2ddl.auto">create</property> -->
+		<!-- <property name="hbm2ddl.auto">validate</property> -->
+		<property name="javax.persistence.validation.mode">none</property>
+		<!-- 映射文件的注册 -->
+		<!-- <mapping resource="org/windbell/lab/hamster/hibernate/entity/student.hbm.xml"/> -->
+		<mapping class="org.windbell.lab.hamster.hibernate.entity.BaseMode" />
+		<mapping class="org.windbell.lab.hamster.hibernate.entity.Mode" />
+		<mapping class="org.windbell.lab.hamster.hibernate.entity.Enumeration" />
+		<mapping class="org.windbell.lab.hamster.hibernate.entity.EnumerationValue" />
+		<!-- <mapping resource="classpath*:/com/jeecms/core/entity/hbm/*.hbm.xml"/> -->
+		<!-- mapping class="org.windbell.lab.hamster.hibernate.entity.BaseEntity"/> -->
+
+	</session-factory>
+</hibernate-configuration>
