@@ -1,4 +1,4 @@
-package org.windbell.lab.hamster.junti;
+package org.windbell.lab.hamster.junit;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

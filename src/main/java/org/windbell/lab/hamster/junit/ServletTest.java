@@ -1,4 +1,4 @@
-package org.windbell.lab.hamster.junti;
+package org.windbell.lab.hamster.junit;
 
 import org.junit.Assert;
 import org.junit.Before;
